@@ -24,7 +24,7 @@
         .bigbox {
             width: 590px;
             height: 590px;
-            background: url("02.jpg");
+            /*background: url("02.jpg");*/
             margin: 0 auto;
             overflow: hidden;
             position: relative;
@@ -131,6 +131,7 @@
 
         .startbox, .gameoverbox {
             background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
             width: 590px;
             height: 590px;
             position: absolute;
@@ -183,8 +184,8 @@
             bottom:0;
             margin:auto;
             z-index: 5;
-            /*display: none;*/
             background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
             /*background: url("01.jpg");*/
         }
 
@@ -284,6 +285,7 @@
             bottom:0;
             margin: auto;
             background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
             z-index: 30;
             display: none;
         }
@@ -309,6 +311,16 @@
             font-size: 30px;
             font-weight: bold;
         }
+        .phb ul li p a{
+            display: block;
+            color:#fff;
+            font-weight: bolder;
+        }
+        .phb ul li p.fanhui{
+            font-size: 24px;
+            margin-top:150px;
+            cursor: pointer;
+        }
     </style>
     <script src="JQuery.js"></script>
     <script>
@@ -333,8 +345,8 @@
                     $(".shijian").html(0);
                     clearInterval(time);
                     $(".flagnum").html("flag" + numlei);
-                    $(".nycd-box").hide();
-                    $(".startbox").show();
+                    $(".nycd-box").slideUp(1000);
+                    $(".startbox").slideDown(1000);
 //                    fanhui=1;
                 }
                 if ($(target).html() == "一般") {
@@ -342,8 +354,8 @@
                     number = 15;
                     bili = 0.5;
                     $(".scene").empty();
-                    $(".nycd-box").hide();
                     creatgame();
+                    $(".nycd-box").hide();
                     $(".shijian").html(0);
                     clearInterval(time);
                     $(".flagnum").html("flag" + numlei);
@@ -360,8 +372,8 @@
                     $(".shijian").html(0);
                     clearInterval(time);
                     $(".flagnum").html("flag" + numlei);
-                    $(".nycd-box").hide();
-                    $(".startbox").show();
+                    $(".nycd-box").slideUp(1000);
+                    $(".startbox").slideDown(1000);
 //                    return fanhui=3;
                 }
             });
@@ -465,7 +477,7 @@
                             $(".overtext").html("游戏成功！棒棒哒。。。");
                             $(".overtime").html($(".shijian").html());
                             var player = prompt("请输入姓名");
-                            /*bestScore.push({player, score: $("nowtime").html});
+                            bestScore.push({player, score: $("nowtime").html});
                              bestScore.sort(function (a, b) {
                              var scoreA = parseInt(a.score);
                              var scoreB = parseInt(b.score);
@@ -475,9 +487,9 @@
                              return -1
                              }
                              });
-                             localStorage.bestScore = JSON.stringify(bestScore);*/
+                             localStorage.bestScore = JSON.stringify(bestScore);
 
-                            if ($(".nycd-box div").html() == "简单") {
+                            /*if ($(".nycd-box div").html() == "简单") {
                                 jdbestScore.push({player, score: $(".shijian").html()});
                                 jdbestScore.sort(function (a, b) {
                                     var scoreA = parseInt(a.score);
@@ -513,7 +525,7 @@
                                     }
                                 });
                                 localStorage.knbestScore = JSON.stringify(knbestScore);
-                            }
+                            }*/
 
                         } else {
                             number++;
@@ -538,7 +550,6 @@
             $(document).on("contextmenu", function (e) {
                 e.preventDefault();
             });
-
             $(".start").click(function () {
                 creatgame();
                 $(".startbox").hide();
@@ -554,17 +565,7 @@
             });
             $(".phbbtn").click(function () {
                 $(".phb").show();
-//                getPhb();
-                /* if(fhz==1||fhz==2||fhz==3){
-                 switch(fhz){
-                 case 1:getPhb(jdbestScore);break;
-                 case 2:getPhb(ybbestScore);break;
-                 case 3:getPhb(knbestScore);break;
-                 }
-                 }else{*/
                 getPhb(jdbestScore);
-                /* }*/
-
             })
         })//结束
 
@@ -607,6 +608,7 @@
             <li>
                 <p>排行榜</p>
                 <p class="phb-main"></p>
+                <p class="fanhui">返回</p>
             </li>
         </ul>
     </div>
