@@ -10,149 +10,203 @@
         * {
             margin: 0;
             padding: 0;
+            font-family: 微软雅黑;
         }
 
         canvas {
-            background: #ccc;
+            background: #fff;
             /* background: radial-gradient()-gradient(circle); */
             margin: 0 auto;
             display: block;
+            margin-top:8px;
         }
 
         .canvasbox {
             width: 300px;
             height: 500px;
-            background: #e8e8e8;
+            background: #222;
             /*padding-left: 30px;*/
             float: left;
+            color:#fff;
+            margin-top: 2px;
         }
-        session{
-            padding:10px;
-            display: block;
-        }
-        #shape {
 
+        session {
+            padding: 30px;
+            padding-left: 40px;
+            display: block;
+            color:#fff;
+        }
+        session label{
+            display: inline-block;
+            width: 70px;
+            margin-right: 20px;
+        }
+
+        .bigbox{
+            width: 100%;
+            height: 635px;
+            background: #111;
+            position: relative;
+        }
+        .title {
+            width: 100%;
+            height: 70px;
+            background: #222;
+            font-size: 30px;
+            font-family: "Gray Design Bold";
+            color: #fff;
+            text-align: center;
+            line-height: 70px;
+            color:#fff;
+        }
+        .menu{
+            width: 100%;
+            height: 30px;
+            background: #222;
+            margin-top: 2px;
+        }
+        #redo{
+            margin-right: 40px;
+        }
+        #redo,#save,#clear{
+            width: 80px;
+            height: 30px;
+            margin-left: 40px;
+            border-radius: 3px;
+            float: right;
+
+        }
+        #shape,#color,#width,#style,#side{
+            width: 80px;
+            /*text-align: center;*/
         }
     </style>
 </head>
 <body>
-<div class="canvasbox">
-    <session>
-        <label for="shape">选择形状</label>
-        <select name="" id="shape">
-            <option value="rect">矩形</option>
-            <option value="line">直线</option>
-            <option value="circlein">内切圆</option>
-            <option value="circleout">外切圆</option>
-            <option value="circlecenter">中心圆</option>
-            <option value="ploy">多边形</option>
-            <option value="pen">铅笔</option>
-            <option value="eraser">橡皮</option>
-        </select>
-    </session>
-    <session>
-        <label for="color">选择颜色</label>
-            <input type="color" id="color">
-    </session>
-    <session>
-        <label for="width">选择粗细</label>
-            <input type="number" step="2" min="2" max="20" value="2" id="width">
-    </session>
-    <session>
-        <label for="style">选择方式</label>
-        <select name="" id="style">
-            <option value="stroke">描边</option>
-            <option value="fill">填充</option>
-        </select>
-    </session>
-    <session>
-        <label for="side">边数</label>
-        <input type="number" step="1" min="3" max="20" value="3" id="side">
-    </session>
-    <input type="button" value="撤销" id="redo">
-    <input type="button" value="保存" id="save">
-    <input type="button" value="清空" id="clear">
+<div class="bigbox">
+    <div class="title">画板</div>
+    <div class="menu">
+        <input type="button" value="撤销" id="redo">
+        <input type="button" value="保存" id="save">
+        <input type="button" value="清空" id="clear">
 
+    </div>
+    <div class="canvasbox">
+        <session>
+            <label for="shape">选择形状:</label>
+            <select name="" id="shape">
+                <option value="rect">矩形</option>
+                <option value="line">直线</option>
+                <option value="circlein">内切圆</option>
+                <option value="circleout">外切圆</option>
+                <option value="circlecenter">中心圆</option>
+                <option value="ploy">多边形</option>
+                <option value="pen">铅笔</option>
+                <option value="eraser">橡皮</option>
+            </select>
+        </session>
+        <session>
+            <label for="color">选择颜色:</label>
+            <input type="color" id="color">
+        </session>
+        <session>
+            <label for="width">选择粗细:</label>
+            <input type="number" step="2" min="2" max="20" value="2" id="width">
+        </session>
+        <session>
+            <label for="style">选择方式:</label>
+            <select name="" id="style">
+                <option value="stroke">描边</option>
+                <option value="fill">填充</option>
+            </select>
+        </session>
+        <session>
+            <label for="side">边数:</label>
+            <input type="number" step="1" min="3" max="20" value="3" id="side">
+        </session>
+
+    </div>
+    <canvas width="1000px" height="490px" ></canvas>
 </div>
-<canvas width="500px" height="500px"></canvas>
 </body>
-<script src="draw.js"></script>
+<script src="js/draw.js"></script>
 <script>
     var canvas = document.querySelector("canvas");
     var cobj = canvas.getContext("2d");
-    var data=[];
+    var data = [];
     var shape = document.querySelector("#shape");
     var s = "rect";
     shape.onchange = function () {
         s = this.value;
     };
-    var color=document.querySelector("#color");
-    var c="#000";
-    color.onchange=function () {
-      c=this.value;
+    var color = document.querySelector("#color");
+    var c = "#000";
+    color.onchange = function () {
+        c = this.value;
     };
-    var width=document.querySelector("#width");
-    var w=2;
-    width.onchange=function () {
-        w=this.value;
+    var width = document.querySelector("#width");
+    var w = 2;
+    width.onchange = function () {
+        w = this.value;
     };
-    var style=document.querySelector("#style");
-    var st="stroke";
-    style.onchange=function () {
-        st=this.value;
+    var style = document.querySelector("#style");
+    var st = "stroke";
+    style.onchange = function () {
+        st = this.value;
     };
-    var side=document.querySelector("#side");
-    var si=3;
-    side.onchange=function () {
-        si=this.value;
+    var side = document.querySelector("#side");
+    var si = 3;
+    side.onchange = function () {
+        si = this.value;
     };
     canvas.onmousedown = function (e) {
         var ox = e.offsetX;
         var oy = e.offsetY;
-        var draw = new Draw(cobj, {color:c,width:w,style:st}); //实例化一个绘图对象
-        if(s=="pen"){
+        var draw = new Draw(cobj, {color: c, width: w, style: st}); //实例化一个绘图对象
+        if (s == "pen") {
             cobj.beginPath();
-            cobj.moveTo(ox,oy);
+            cobj.moveTo(ox, oy);
         }
         canvas.onmousemove = function (e) {
             var mx = e.offsetX;
             var my = e.offsetY;
-            if(s!="eraser"){
-                cobj.clearRect(0, 0, 500, 500);
-                if (data.length!=0) {
-                    cobj.putImageData(data[data.length-1], 0, 0);
+            if (s != "eraser") {
+                cobj.clearRect(0, 0, 1000, 490);
+                if (data.length != 0) {
+                    cobj.putImageData(data[data.length - 1], 0, 0);
                 }
             }
-            draw[s](ox, oy, mx, my,si); //对象的访问
+            draw[s](ox, oy, mx, my, si); //对象的访问
         };
         document.onmouseup = function () {
             canvas.onmousemove = null;
             document.onmouseup = null;
-            data.push(cobj.getImageData(0, 0, 500, 500));
+            data.push(cobj.getImageData(0, 0, 1000, 490));
         }
     };
-    var redo=document.querySelector("#redo");
-    redo.onclick=function () {
-        if(data.length==0){
+    var redo = document.querySelector("#redo");
+    redo.onclick = function () {
+        if (data.length == 0) {
             alert("当前已经是最后一条数据");
             return;
         }
-        cobj.clearRect(0,0,500,500);
+        cobj.clearRect(0, 0, 1000, 490);
         data.pop();
-        if(data.length==0){
+        if (data.length == 0) {
             return;
         }
-        cobj.putImageData(data[data.length-1],0,0);
+        cobj.putImageData(data[data.length - 1], 0, 0);
     };
-    var save=document.querySelector("#save");
-    save.onclick=function () {
-        var r=canvas.toDataURL();
-        location.href=r;
+    var save = document.querySelector("#save");
+    save.onclick = function () {
+        var r = canvas.toDataURL();
+        location.href = r;
     };
-    var clear=document.querySelector("#clear");
-    clear.onclick=function () {
-        cobj.clearRect(0,0,500,500);
-        data=[];
+    var clear = document.querySelector("#clear");
+    clear.onclick = function () {
+        cobj.clearRect(0, 0, 1000, 490);
+        data = [];
     }
 </script>
 </html>

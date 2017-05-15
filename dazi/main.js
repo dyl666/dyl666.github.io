@@ -60,7 +60,7 @@
                 var rn = Math.floor(Math.random() * 26 + 65);//先得到一个65-90的随机数
                 var le = String.fromCharCode(rn);//根据指定的一个或者多个ASCII码得到对应的字符串
             } while (this.obj[le]);//这个时候是个假值
-            div.innerHTML = `<img src="img/${le}.jpg"  style="width: 100px;height: 100px">`;//把获取得到的字母放到div里面
+            div.innerHTML = `<img src="img/${le}.png"  style="width: 100px;height: 100px">`;//把获取得到的字母放到div里面
             do {
                 var rl = Math.random() * 720;
             } while (this._check(rl));
