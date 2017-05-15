@@ -1,0 +1,406 @@
+body{
+	background:#EEEEEE;
+	width: 100%;
+	height: 100%"
+}
+.header{
+	width: 100%;
+	height: 0.8rem;
+	overflow: hidden;
+	background: #fff;
+	top: 0;
+	position: fixed;
+}
+.header ul{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.header ul li{
+	width: 33.333%;
+	height: 100%;
+	font-size: 0.3rem;
+	float: left;
+	text-align: center;
+	line-height: 0.8rem;
+}
+.jiben{
+	width: 100%;
+	height: 0.5726rem;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 0.5726rem;
+	border-right: 0.02rem solid #EAEAEA;
+	margin-top: 0.1137rem;
+}
+.headerx{
+	width: 100%;
+	height: 100%;
+	top: 0rem;
+	position: fixed;
+}
+.headerxia{
+	top: 0.8rem;
+	width: 100%;
+	height: 0.88rem;
+	background: #F14344;
+	position: relative;
+}
+.headerxia1{
+	width: 0.4rem;
+	height: 0.4rem;
+	position: absolute;
+	left: 0.2rem;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	border-radius: 50%;
+	background: #F14344;
+	border: 0.02rem solid #fff;
+	font-size: 0.2rem;
+	color: #fff;
+	text-align: center;
+	line-height: 0.4rem;
+}
+.headerxia2{
+	width: 0.7rem;
+	height: 0.7rem;
+	position: absolute;
+	left: 0.8rem;
+	top: -0.1rem;
+	margin: auto;
+}
+.headerxia2 img{
+	width: 100%;
+	height: 100%;
+}
+.headerxia3{
+	width: 3.7rem;
+	height: 100%;
+	position: absolute;
+	right: 2.14rem;
+	top: -0.08rem; 
+	margin: auto;
+	font-size: 0.3rem;
+	line-height: 1rem;
+	color: #fff;
+}
+.headerxia4{
+	width: 0.36rem;
+	height: 100%;
+	font-size: 0.4rem;
+	line-height: 1rem;
+	color: #fff;
+	position: absolute;
+	right: 0.4rem;
+	top: -0.08rem;
+	margin: auto;
+}
+.jichu{
+	width: 100%;
+	height: 0.96rem;
+	text-align: center;
+	line-height: 0.96rem;
+	font-size: 0.32rem;
+	background: #eee;
+	border: 0.02rem solid #cccbcb;
+	margin-top: 1.6rem;
+}
+.jichu:after{
+	width: 100%;
+	height:0.22rem;
+	content: "";
+	display: block;
+	background: #eee;
+}
+.hd{
+	width: 100%;
+	height: 0.8rem;
+	background: #fff;
+	margin-top: 0.22rem;
+	text-align: left;
+	font-size: 0.28rem;
+	line-height: 0.58rem;
+	padding: 0.12rem 0 0 0.24rem;
+}
+.tu1{
+	width: 100%;
+	height: 3.56rem;
+	/* background-repeat: no-repeat;
+	background-size: contain;
+	background: url('../img/xq1.jpg_.webp') */
+}
+.tu1:after{
+	width: 100%;
+	height:0.22rem;
+	content: "";
+	margin-top: -0.22rem;
+	display: block;
+	background: #fff;
+}
+.tu1 img{
+	width: 100%;
+	height: 100%;
+}
+/* 网店推荐开始 */
+.wd-main{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.wd-main img{
+	width: 100%;
+	height: 100%;
+}
+.wd-main{
+	width: 100%;
+	height: 100%;
+}
+.wd-main ul{
+	width: 100%;
+	height: 100%;
+}
+.wd-main ul li{
+	width: 33.33%;
+	height: 3.94rem;
+	background: #F4F4F4;
+	float: left;
+	border-right: 0.02rem solid #fff;
+}
+.wd-main-title{
+	width: 100%;
+	height: 0.84rem;
+	background: #F4F4F4;
+	font-size: 0.28rem;
+	margin-top: -0.2rem;
+	padding: 0.12rem 0.12rem 0;
+}
+.wd-main-price{
+	width: 100%;
+	height: 0.64rem;
+	background: #F4F4F4;
+	font-size: 0.28rem;
+	margin-top: -0.2rem;
+	line-height: 0.8rem;
+	color: #dd2727;
+	padding: 0rem 0.12rem;
+}
+/* 商品信息开始 */
+.xinxi{
+	width: 100%;
+	height: 5.96rem;
+	background: #F9F9F9;
+}
+.xinxi-main{
+	width: 100%;
+	height: 4.72rem;
+	padding: 0.3rem 0.24rem 0 0.36rem;
+}
+.xinxi-main ul{
+	width: 1.21rem;
+	height: 4.72rem;
+	float: left;
+}
+.xinxi-main ul li{
+	width: 100%;
+	height: 0.32rem;
+	font-size: 0.28rem;
+	color: #999;
+	margin-bottom: 0.24rem;
+}
+.xinxi-main ul li img{
+	width: 100%;
+	height: 100%;
+}
+.ckgd{
+	width: 100%;
+	height: 1rem;
+	background: #fff;
+	margin-top: 0.22rem;
+	font-size: 0.28rem;
+	color: #666;
+	line-height: 1rem;
+}
+.ckqb-zi{
+	width: 1.4rem;
+	height: 100%;
+	margin: 0 auto;
+}
+.tupian-img{
+	width: 100%;
+	height: 100%;
+}
+.tupian-img img{
+	width: 100%;
+	height: 100%;
+}
+/* 尺码指南 */
+.chima{
+	width: 100%;
+	height: 100%;
+}
+.chima-img{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.chima-img img{
+	width: 100%;
+	height: 100%;
+}
+.cp{
+	width: 100%;
+	height: 5rem;
+}
+.cp img{
+	width: 100%;
+	height: 100%;
+}
+/* 图文开始 */
+.tuwen{
+	width: 100%;
+	border-bottom: 0.02rem solid #e8e8e8;
+}
+.tuwen img{
+	width: 100%;
+	height: 100%;
+	/* margin-top: -0.4rem; */
+}
+.xijie-img{
+	width: 100%;
+	height: 10.4rem;
+}
+.xijie-img img{
+	width: 100%;
+	height: 100%;
+}
+.background{
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+/* 搭配开始 */
+.dapei{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+.dapei-di{
+	width: 100%;
+	height: 15.46rem;
+	float: right;
+}
+.dapei img{
+	width: 100%;
+	height: 100%;
+}
+.dapei-you{
+	width: 2.16rem;
+	height: 22.32rem;
+	background: rgba(0,0,0,.5);
+	position: absolute;
+	right: 0;
+	top: 1.3rem;
+}
+.dapei-you-imgs{
+	width: 1.8rem;
+	height: 1.8rem;
+	margin: 0.08rem auto;
+	/* margin-bottom: 0.18rem; */
+}
+.dapei-you-imgs img{
+	width: 100%;
+	height: 100%;
+}
+.dapei-you-imgx{
+	width: 100%;
+	height: 0.36rem;
+	text-align: center;
+	font-size: 0.7rem;
+	color: #fff;
+	line-height: 0.5rem;
+	line-height: 0.36rem;
+}
+/* 搭配 */
+.fensi{
+	width: 100%;
+	height: 100%;
+	margin-top: 0.2rem;
+	overflow: hidden;
+}
+.fensi-img{
+	width: 100%;
+	height: 3rem;
+}
+.fensi-img img{
+	width: 100%;
+	height: 100%;
+}
+/* 价格 */
+.jiage{
+	width: 100%;
+	height: 3.68rem;
+}
+.jiage img{
+	width: 100%;
+	height: 100%;
+}
+/* 空白 */
+.kongbai{
+	width: 100%;
+	height: 1.3rem;
+	background: #F4F4F4;
+}
+/* 底部 */
+.footer2{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	height: 1rem;
+	background: #fff;
+	/* position: fixed; */
+	border-top: 0.02rem solid #E5E5E5;
+}
+.kefu{
+	width: 1rem;
+	height: 100%;
+	position: relative;
+	float: left;
+	border-right: 0.02rem solid #E5E5E5;
+}
+.kefu-top1 img{
+	width: 100%;
+	height: 100%;
+}
+.kefu-top1{
+	width: 0.4rem;
+	height: 0.4rem;
+	margin: -0.3rem auto;
+}
+.kefu-top2{
+	width: 100%;
+	height: 0.4rem;
+	color: #999;
+	font-size: 0.24rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0rem;
+	margin: auto;
+	line-height: 0.4rem;
+	text-align: center;
+}
+.jiaru,.goumai{
+	width: 2.25rem;
+	height: 100%;
+	background: #FF9500;
+	float: left;
+	font-size: 0.3rem;
+	line-height: 1rem;
+	color: #fff;
+	text-align: center;
+}
+.goumai{
+	background: #DD2727;
+}

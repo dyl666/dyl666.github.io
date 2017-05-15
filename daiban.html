@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 微软雅黑;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .title {
+            width: 100%;
+            height: 100px;
+            background: #0ff;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 100px;
+            padding-left: 30px;
+
+        }
+
+        .inputarea {
+            width: 100%;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        #text {
+            width: 300px;
+            height: 50px;
+        }
+
+        #submit {
+            border: none;
+        }
+
+        .show {
+            width: 100%;
+            background: #F3E0D4;
+            flex-grow: 1;
+        }
+
+        .plan {
+            width: 50%;
+            height: 80%;
+            overflow: hidden;
+            background: #369;
+            float: left;
+        }
+
+        .done {
+            width: 50%;
+            height: 80%;
+            overflow: hidden;
+            background: #963;
+            float: right;
+        }
+        ul li{
+            width: 100%;
+            height: 34px;
+        }
+        ul li input {
+            float: left;
+            width: 30px;
+            height: 30px;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li span {
+            float: left;
+            width: 474px;
+            height: auto;
+            border: 1px dashed #CCCCCC;
+            line-height: 30px;
+            padding-left: 30px;
+            color: #fff;
+        }
+
+        ul li time {
+            width: 168px;
+            height: 30px;
+            float: right;
+            background: #9c0200;
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+        }
+
+        .contenttitle {
+            width: 50%;
+            float: left;
+            text-align: center;
+            font-size: 16px;
+            color: red;
+            font-weight: bold;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="title">TODO LIST</div>
+<div class="inputarea">
+    <input type="text" id="text">
+    <input type="button" id="submit" value="提交">
+</div>
+<div class="show">
+    <div class="contenttitle">未完成</div>
+    <div class="contenttitle">已完成</div>
+    <ul class="plan">
+        <li>
+            <input type="checkbox">
+            <span contenteditable="true">12354641</span>
+            <time>2017/5/3 15:24</time>
+        </li>
+    </ul>
+    <ul class="done">
+        <li>
+            <input type="checkbox">
+            <span contenteditable="true">12354641</span>
+            <time>2017/5/3 15:24</time>
+        </li>
+    </ul>
+</div>
+</body>
+<script>
+    var text = document.querySelector("#text");
+    var submit = document.querySelector("#submit");
+    var plan = document.querySelector(".plan");
+    var done = document.querySelector(".done");
+    function getData() {
+        return localStorage.todo ? JSON.parse(localStorage.todo) : [];
+    }
+    function saveData(data) {
+        return localStorage.todo = JSON.stringify(data);
+    }
+    function reWrite() {
+        var data = getData();
+        var str1="", str2="";
+        data.forEach(function (v,i) {
+            if (!v.done) {
+                str1 += `<li id=${i}><input type="checkbox" onfocus="changestate(this)"><span contenteditable="true" onblur="changecontent(this)">${v.content}</span><time>${time(v.time)}</time></li>`
+            }else{
+                str2 += `<li id=${i}><input type="checkbox" onfocus="delcontent(this)"><span contenteditable="true">${v.content}</span><time>${time(v.time)}</time></li>`
+            }
+
+        });
+        plan.innerHTML = str1;
+        done.innerHTML=str2;
+
+    }
+    reWrite();
+    submit.onclick = function () {
+        if (text.value == "") {
+            return;
+        }
+        var val = text.value;
+        text.value = "";
+        var data = getData();
+        var date = new Date();
+        var time = date.getTime();
+        data.push({content:val, time,done:false});
+        saveData(data);
+        reWrite();
+    };
+    function time(t) {
+        var date = new Date();
+        date.setTime(t);
+        var year = setZero(date.getFullYear());
+        var month = setZero(date.getMonth());
+        var day = setZero(date.getDate());
+        var hours = setZero(date.getHours());
+        var minutes=setZero(date.getMinutes());
+        var seconds=setZero(date.getSeconds());
+        return year+"/"+month+"/"+day+" "+hours+":"+minutes+":"+seconds;
+    }
+    function setZero(num) {
+        if(num<10){
+            return "0"+num;
+        }else{
+            return num;
+        }
+    }
+    function changestate(ele) {
+        var id=ele.parentNode.id;
+        var data=getData();
+        data[id].done=true;
+        saveData(data);
+        reWrite();
+    }
+    function delcontent(ele) {
+        var id=ele.parentNode.id;
+        var data=getData();
+        data.splice(id,1);
+        saveData(data);
+        reWrite();
+    }
+    function changecontent(ele) {
+        var data=getData();
+        var id=ele.parentNode.id;
+        var val=ele.innerHTML;
+        data[id].content=val;
+        saveData(data);
+        reWrite();
+    }
+</script>
+</html>

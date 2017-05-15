@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>凡客nav</title>
+    <link rel="stylesheet" href="css/base.css">
+    <style>
+
+        nav {
+            width: 1200px;
+            height: 46px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            width: 185px;
+            height: 46px;
+            float: left;
+        }
+
+        .lists {
+            width: 990px;
+            height: 21px;
+            float: right;
+            text-align: center;
+            line-height: 21px;
+            padding: 23px 0;
+            cursor: pointer;
+            font-family: "Microsoft YaHei";
+        }
+
+        .shouye {
+            width: 99px;
+            float: left;
+            display: inline-block;
+        }
+
+        .lists > li {
+            width: 99px;
+            float: left;
+            border-right: 1px solid #888;
+            font-size: 16px;
+            position: relative;
+        }
+
+        .seclists {
+            width: 99px;
+            height: 0;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            top: 28px;
+            transition: all 2s;
+        }
+
+        .seclists .top {
+            width: 99px;
+            height: 10px;
+            border-top: 5px solid #B81B22;
+            /*margin: 0;*/
+        }
+
+        .seclists li:not(.top) {
+            width: 99px;
+            height: 40px;
+            margin: 0;
+            border-left: 1px solid #888;
+            border-right: 1px solid #888;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var lists = document.querySelectorAll(".lists>li");
+            var seclists = document.querySelectorAll(".seclists");
+            console.log(lists);
+            console.log(seclists);
+            var arr = [];
+            Array.from(seclists).forEach(function (ul) {
+                var lis = document.querySelectorAll("li");
+                var height = lis.length * 30 - 20;
+                arr.push(height);
+
+            });
+            Array.from(lists).forEach(function (li, index) {
+                li.onmouseover = function () {
+                    seclists[index].style.height = arr[index] + "px";
+                };
+                li.onmouseout = function () {
+                    seclists[index].style.height = 0;
+                }
+            })
+
+        };//结束
+    </script>
+</head>
+<body>
+<nav>
+    <div class="logo">
+        <a href="">
+            <img src="img/logo18546.png" alt="">
+        </a>
+    </div>
+    <ul class="lists">
+        <div class="shouye">
+            <a href="">首页</a>
+        </div>
+        <li>
+            <a href="">T恤</a>
+            <ul class="seclists">
+                <li class="top"><a href=""></a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">衬衫</a>
+            <ul class="seclists">
+                <li class="top"><a href=""></a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">黑标</a>
+            <ul class="seclists">
+                <li class="top"><a href=""></a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">外套</a>
+            <ul class="seclists">
+                <li class="top"><a href=""></a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">针织衫</a>
+            <ul class="seclists">
+                <li class="top"><a href=""></a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">水柔绵</a>
+            <ul class="seclists">
+                <li class="top"><a href=""></a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">裤装</a>
+            <ul class="seclists">
+                <li class="top"><a href=""></a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="">鞋</a>
+            <ul class="seclists">
+                <li class="top"><a href=""></a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+            </ul>
+        </li>
+        <li style="border-right: 0">
+            <a href="">家居配饰</a>
+            <ul class="seclists">
+                <li class="top"><a href=""></a></li>
+                <li><a href="">11</a></li>
+                <li><a href="">11</a></li>
+            </ul>
+        </li>
+
+    </ul>
+</nav>
+</body>
+</html>

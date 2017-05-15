@@ -1,0 +1,289 @@
+.header{
+	width: 100%;
+	height: 0.89rem;
+	background: #007BE3;
+	position: fixed;
+}
+.box{
+	width: 2.27rem;
+    height: 0.68rem;
+    margin: 0 auto;
+    padding-top: 0.16rem;
+
+}
+.logo{
+	width: 0.7rem;
+	height: 0.67rem;
+	background-image: url('../img/logo.png') ;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-size: 0.7rem;
+	float: left;
+	/* margin: 0 auto; */
+}
+.header .box h3{
+	font-size: 0.36rem;
+	color: #fff;
+	line-height: 0.68rem;
+	float: left;
+	margin-left: 0.18rem;
+}
+.banner{
+	width: 100%;
+	height: 4.21rem;
+	background: url('../img/banner_02.png') center center no-repeat;
+	background-size: cover;
+}
+.content{
+	width: 100%;
+	height: 4.84rem;
+	padding: 0.28rem 0.2rem 0;
+	background: #F5F6FA;
+	
+}
+.content ul{
+	width: 100%;
+/* 	height: 100%; */
+	display: flex;
+	display: -webkit-flex;
+	justify-content: space-between;
+}
+.content ul li{
+	width: 1.55rem;
+	height: 1.96rem;
+	margin-bottom: 0.32rem;
+	text-align: center;
+	font-size: 0.24rem;
+	color: #000;
+	float: left;
+	flex-wrap: nowrap;
+}
+.content ul li a{
+	display: block;
+	width: 100%;
+	height: 1.56rem;
+	background: #fff;
+	border-radius: 0.25rem;
+	margin-bottom: 0.16rem;
+	padding-top: 0.25rem;
+	padding-left: 0.25rem;
+}
+.content ul li a div.li_1{
+	background: #fff url('../img/shouye6.png') 0 0 no-repeat;
+	background-size: 2rem;
+}
+.content ul li a div.li_2{
+	background: #fff url('../img/shouye6.png') -0.98rem 0 no-repeat;
+	background-size: 2rem;
+}
+.content ul li a div.li_3{
+	background: #fff url('../img/shouye6.png') 0.15rem -1.1rem no-repeat;
+	background-size: 2rem;
+}
+.content ul li a div.li_4{
+	background: #fff url('../img/ufo.png') no-repeat;
+	background-size:100%;
+}
+.content ul li a div.li_5{
+	background: #fff url('../img/shouye6.png') -0.98rem -1.1rem no-repeat;
+	background-size: 2rem;
+}
+.content ul li a div.li_6{
+	background: #fff url('../img/shouye6.png') 0 -3.3rem no-repeat;
+	background-size: 2rem;
+}
+.content ul li a div.li_7{
+	background: #fff url('../img/shouye6.png') 0.1rem -2.2rem no-repeat;
+	background-size: 2rem;
+}
+.content ul li a div.li_8{
+	background: #fff url('../img/shouye6.png') -0.98rem -2.2rem no-repeat;
+	background-size: 2rem;
+}
+.content ul li a div{
+	width: 1.05rem;
+	height: 1.05rem;
+}
+.content ul li:last-child {
+    margin-right: 0;
+}
+.server{
+	width: 100%;
+	/* background: #fff; */
+}
+.title{
+	width: 100%;
+	height: 0.63rem;
+	border-bottom: 0.02rem solid #e8e8e8;
+	text-align: center;
+	line-height: 0.63rem;
+	font-size: 0.24rem;
+	color: #1378ba;
+}
+.server ul.col-1{
+	width: 100%;
+	height: 2.18rem;
+	border-bottom: 0.02rem solid #e8e8e8;
+}
+.server ul.col-1 li{
+	width: 50%;
+	height: 100%;
+	float: left;
+	border-right: 0.02rem solid #e8e8e8;
+	padding: 0.38rem 0 0.48rem 0.16rem;
+}
+ul.col-1 li .left{
+	width: 1.8rem;
+	float: left;
+	height: 100%;
+}
+ul.col-1 li .left h2{
+	font-size: 0.24rem;
+	font-weight: normal;
+	color: #000;
+}
+ul.col-1 li .left h3{
+	font-size: 0.18rem;
+	font-weight: normal;
+	color: #999999;
+}
+ul.col-1 li .right{
+	width: 1.5rem;
+	height: 100%;
+	float: left;
+	background: 2rem;
+	background: #fff url('../img/shouye6.png') 0 -4.4rem no-repeat;
+}
+.server ul.col-1 li .right-xx {
+	width: 1.5rem;
+	height: 100%;
+	float: left;
+    background: #fff url('../img/shouye6.png') 0 -5.9rem no-repeat;
+    background-size: 2rem;
+}
+.server ul.col-2 {
+	width: 100%;
+	height: 1.38rem;
+    border-bottom: 1px solid #e8e8e8;
+}
+.server ul.col-2 li{
+	float: left;
+    width: 33.33%;
+    height: 100%;
+    border-right: 1px solid #e8e8e8;
+    padding: 0.4rem 0 0.38rem 0.2rem;
+}
+.server ul.col-2 li .left1{
+	width: 0.6rem;
+	height: 100%;
+	float: left;
+	background: url('../img/shouye_01.png') center center no-repeat;
+    background-size: cover;
+}
+.server ul.col-2 li .left2{
+	width: 0.6rem;
+	height: 100%;
+	float: left;
+	background: url('../img/shouye_02.png') center center no-repeat;
+    background-size: cover;
+}
+.server ul.col-2 li .left3{
+	width: 0.6rem;
+	height: 100%;
+	float: left;
+	background: url('../img/shouye_03.png') center center no-repeat;
+    background-size: cover;
+}
+.server ul.col-2 li .right{
+	width: 1.5rem;
+	height: 100%;
+	float: left;
+	margin-left: 0.1rem;
+}
+.server ul.col-2 li .right h2 {
+    font-size: 0.24rem;
+    color: #000000;
+    font-weight: normal;
+}
+.server ul.col-2 li .right h3 {
+    font-size: 0.18rem;
+    color: #999999;
+    font-weight: normal;
+    /* line-height: 0.3rem; */
+}
+.bottom{
+	width: 100%;
+	height: 0.9rem;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	z-index: 999;
+	margin-top: 0.2rem;
+}
+.bottom .bottom-left{
+	width: 30%;
+	height: 0.8rem;
+	margin-top:0.1rem;
+	background: #E7E7E7;
+	float: left;
+}
+.bottom .bottom-middle{
+	width: 40%;
+	height: 100%;
+	margin-top: -0.04rem;
+	background: #FF8D12;
+	float: left;
+	border-radius: 0.08rem;
+	box-shadow: 0px 0px 0.15rem #ff8d12;
+}
+.bottom .bottom-middle i{
+	width: 0.36rem;
+	height: 0.36rem;
+	float: left;
+	margin-left: 0.7rem;
+	background: url('../img/shouye6.png') -1.6rem -4.78rem no-repeat;
+    background-size: 2rem;
+}
+.bottom .bottom-middle span{
+	color:#fff;
+	font-size: 0.3rem;
+	float: left;
+	font-weight: bold;
+}
+.bottom .bottom-right{
+	width: 30%;
+	height: 0.8rem;
+	margin-top:0.1rem;
+	background: #E7E7E7;
+	float: left;
+}
+.bottom .bottom-right i {
+    width: 0.32rem;
+    height: 0.32rem;
+   background: url('../img/shouye6.png') -1.6rem -5.3rem no-repeat;
+    background-size: 2rem;
+    float: left;
+    line-height: 0.9rem;
+    margin-top: 0.28rem;
+    margin-left: 0.27rem;
+}
+.bottom div i {
+    width: 0.32rem;
+    height: 0.32rem;
+    background: url('../img/qq.png') 0 0 no-repeat;
+    background-size: 100%;
+    float: left;
+    line-height: 0.9rem;
+    margin-top: 0.28rem;
+    margin-left: 0.27rem;
+}
+.bottom div span{
+	font-size: 0.26rem;
+	margin-left: 0.1rem;
+	float: left;
+	line-height: 1rem;
+}
+.dibu{
+	width: 100%;
+	height: 1rem;
+}

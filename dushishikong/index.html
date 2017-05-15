@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<!--顶部开始-->
+<div class="wraper">
+    <div class="top">
+        <div class="top-left">
+            <img src="img/gonggao.png" alt="">
+            <div class="gonggao-con">最新公告：
+                <a href="">都市时空装饰4.15盛大开业 巅峰特大活动火热预订中</a>
+            </div>
+        </div>
+        <div class="top-right">
+            <div class="top-right-text">
+                <p style="margin-right: 25px">
+                    <a href="">热装楼盘</a>
+                </p>
+                <p>
+                    <a href="">在建工地</a>
+                </p>
+            </div>
+            <div class="weixin">
+                <img src="img/weixin.jpg" alt="">&nbsp;微信
+            </div>
+            <div class="weixin">
+                <img src="img/weibo.png" alt="">&nbsp;微信
+            </div>
+        </div>
+    </div>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <a href="">
+                        <img src="img/logo.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="search">
+                <div class="search-kuang">
+                    <input type="text" value="关键词" class="search-input1">
+                    <a href=""><input type="text" value="搜索" class="search-input2"></a>
+                </div>
+            </div>
+            <div class="hotLine">
+                <img src="img/dianhua.jpg" alt="">
+                <p class="p1">24小时家装咨询：</p>
+                <p class="p2 text-red">0351—8069126</p>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="container-nav">
+            <ul class="nav-left">
+                <li style="background: #D42021">
+                    <a href="">网站首页</a>
+                </li>
+                <li>
+                    <a href="">装修案例</a>
+                </li>
+                <li>
+                    <a href="">设计团队</a>
+                </li>
+                <li>
+                    <a href="">装修百科</a>
+                </li>
+                <li>
+                    <a href="">关于我们</a>
+                </li>
+                <li>
+                    <a href="">优惠活动</a>
+                </li>
+                <li style="border-right: 0">
+                    <a href="">品牌保障</a>
+                </li>
+            </ul>
+            <a href="">
+                <div class="nav-right">
+                    家装快速报价
+                    <span>HOT</span>
+                </div>
+            </a>
+        </div>
+    </nav>
+</div>
+<!--顶部结束-->
+
+<!--主体内容开始-->
+<main>
+    <!--banner开始-->
+    <div calss="banner">
+        <div class="banner-container">
+            <ul>
+                <li><a href=""><img src="img/banner1.png" alt=""></a></li>
+                <li><a href=""><img src="img/banner2.png" alt=""></a></li>
+                <li><a href=""><img src="img/banner3.png" alt=""></a></li>
+                <li><a href=""><img src="img/banner4.png" alt=""></a></li>
+                <li><a href=""><img src="img/banner5.png" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+    <!--banner结束-->
+    <!--报价开始-->
+    <div class="baojia-container">
+        <div class="baojia-main">
+            <ul>
+                <li class="bj1">
+                    房屋户型
+                    <select name="huxing_shi" id="shi">
+                        <option value="1" selected="selected">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    室
+                    <select name="huxing_ting" id="ting">
+                        <option value="1" selected="selected">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    厅
+                    <select name="huxing_wei" id="wei">
+                        <option value="1" selected="selected">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                    卫
+                </li>
+                <li class="bj2">
+                    建筑面积
+                    <input type="text" id="mianji" class="input_mianji">
+                    <span>㎡</span>
+                </li>
+                <li class="bj3">
+                    装修城市
+                    <select name="huxing_shi" id="shi">
+                        <option value="太原市" selected="selected">太原市</option>
+                        <option value="晋中市">晋中市</option>
+                    </select>
+                    <input type="text" id="city" class="input_cs">
+                </li>
+                <li class="bj4">
+                    装修风格
+                    <label class="label1">现代简约风</label>
+                    <label>欧式风格</label>
+                    <label>田园风格</label>
+                    <label>地中海风格</label>
+                    <label>其他</label>
+
+                </li>
+                <li class="bj5">
+                    装修套系
+                    <label>尊享家居</label>
+                    <label>奢香家居</label>
+                    <label class="label1">拎包入住</label>
+                </li>
+                <li class="bj6">
+                    您的称呼
+                    <input type="text" id="chenghu" class="input_chenghu">
+                </li>
+                <li class="bj7">
+                    手机号
+                    <input type="text" id="shoujihao" class="input_shoujihao">
+                    <input type="text" id="shoujihao" class="input_shoujihao yanzhengma" value="获取验证码">
+                    <input type="text" id="shoujihao" class="input_shoujihao">
+                </li>
+                <li class="bj8">
+                    <input name="Button1" id="button" type="button" value="智能报价" class="baojia">
+                    <a href="">人工报价</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--报价结束-->
+    <!--精美案例开始-->
+    <div class="anli-container">
+        <div class="anli-main">
+            <div class="anli-title">
+                <span>精美案例</span>
+                <span class="span2">[优选2千套实景案例，超8万张照片供您赏析]</span>
+            </div>
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="img/anli1.jpg" alt="">
+                        <div class="anli-txt">
+                            <p>绿地塞纳公馆<span>风格：新中式</span></p>
+                        </div>
+                        <div class="mask">
+                            <div class="mask-main">
+                                <p>绿地塞纳公馆</p>
+                                <p>风格：新中式</p>
+                                <p>现代风格是比较流行的...</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/anli2.jpg" alt="">
+                        <div class="anli-txt">
+                            <p>金桥国贸<span>风格：其他</span></p>
+                        </div>
+                        <div class="mask">
+                            <div class="mask-main">
+                                <p>绿地塞纳公馆</p>
+                                <p>风格：新中式</p>
+                                <p>现代风格是比较流行的...</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/anli3.jpg" alt="">
+                        <div class="anli-txt">
+                            <p>光信佳泰花园<span>风格：现代简约</span></p>
+                        </div>
+                        <div class="mask">
+                            <div class="mask-main">
+                                <p>绿地塞纳公馆</p>
+                                <p>风格：新中式</p>
+                                <p>现代风格是比较流行的...</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/anli4.jpg" alt="">
+                        <div class="anli-txt">
+                            <p>坤泽十里城<span>风格：现代简约</span></p>
+                        </div>
+                        <div class="mask">
+                            <div class="mask-main">
+                                <p>绿地塞纳公馆</p>
+                                <p>风格：新中式</p>
+                                <p>现代风格是比较流行的...</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/anli5.jpg" alt="">
+                        <div class="anli-txt">
+                            <p>天泰玉泽园<span>风格：现代简约</span></p>
+                        </div>
+                        <div class="mask">
+                            <div class="mask-main">
+                                <p>绿地塞纳公馆</p>
+                                <p>风格：新中式</p>
+                                <p>现代风格是比较流行的...</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/anli6.jpg" alt="">
+                        <div class="anli-txt">
+                            <p>富力桃园<span>风格：现代简约</span></p>
+                        </div>
+                        <div class="mask">
+                            <div class="mask-main">
+                                <p>绿地塞纳公馆</p>
+                                <p>风格：新中式</p>
+                                <p>现代风格是比较流行的...</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/anli7.jpg" alt="">
+                        <div class="anli-txt">
+                            <p>御景华府<span>风格：现代简约</span></p>
+                        </div>
+                        <div class="mask">
+                            <div class="mask-main">
+                                <p>绿地塞纳公馆</p>
+                                <p>风格：新中式</p>
+                                <p>现代风格是比较流行的...</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/anli8.jpg" alt="">
+                        <div class="anli-txt">
+                            <p>首开<span>风格：现代简约</span></p>
+                        </div>
+                        <div class="mask">
+                            <div class="mask-main">
+                                <p>绿地塞纳公馆</p>
+                                <p>风格：新中式</p>
+                                <p>现代风格是比较流行的...</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="ckgd">
+                <p><a href="">查看更多案例</a></p>
+            </div>
+        </div>
+    </div>
+    <!--精美案例结束-->
+    <!--设计团队开始-->
+    <div class="design-container">
+        <div class="design-main">
+            <div class="anli-title">
+                <span>设计团队</span>
+                <span class="span2">[汇集行业专业设计力量，私人定制百种风格！]</span>
+            </div>
+            <div class="design-left">
+                <a href=""><img src="img/sj1.png" alt=""></a>
+            </div>
+            <div class="design-right">
+                <ul>
+                    <li>
+                        <img src="img/sj2.jpg" alt="">
+                        <div class="design-info">
+                            <p>吕静静</p>
+                            <p>精英设计师</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/sj3.jpg" alt="">
+                        <div class="design-info">
+                            <p>高扬程</p>
+                            <p>首席设计师</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/sj4.jpg" alt="">
+                        <div class="design-info">
+                            <p>闫郑灿</p>
+                            <p>主任设计师</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/sj5.jpg" alt="">
+                        <div class="design-info">
+                            <p>王振华</p>
+                            <p>首席设计师</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/sj6.jpg" alt="">
+                        <div class="design-info">
+                            <p>孟羽莎</p>
+                            <p>首席设计师</p>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="img/sj7.jpg" alt="">
+                        <div class="design-info">
+                            <p>王慧萍</p>
+                            <p>首席设计师</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="ckgd">
+                <p><a href="">查看更多设计师</a></p>
+            </div>
+        </div>
+    </div>
+    <!--设计团队结束-->
+    <!--热装楼盘开始-->
+    <div class="loupan-container">
+        <div class="loupan-title">
+            <h1>
+                <p>热装楼盘</p>
+                <a href=" ">查看更多 &gt;&gt;</a>
+            </h1>
+            <h1 style="padding-left: 70px;width: 590px">
+                <p>在建工地</p>
+                <a href=" ">查看更多 &gt;&gt;</a>
+            </h1>
+        </div>
+        <div class="loupan-main">
+            <div class="loupan-left">
+                <div class="loupan-left-text">
+                    <h1>热装小区活动</h1>
+                    <p><a href="">天泰玉泽园85平米现代简约</a></p>
+                    <p><a href="">湖滨丽景150平米现代简约</a></p>
+                    <p><a href="">龙城134㎡现代简约风格</a></p>
+                    <p><a href="">朝南新苑95㎡现代简约风格</a></p>
+                    <p><a href="">新晋世家190平米</a></p>
+                    <p><a href="">莱茵香榭130平米</a></p>
+                    <p><a href="">光信国信嘉园143平米</a></p>
+                    <p><a href="">朝南新苑115平米</a></p>
+                    <p><a href="">133平米 龙城2011</a></p>
+                    <p><a href="">紫东国际97平米</a></p>
+                    <div class="tzline"></div>
+                    <a href="" class="ckgdxq">查看更多小区</a>
+                </div>
+                <div class="loupan-left-right">
+                    <img src="img/rzlp22.jpg" alt="">
+                </div>
+            </div>
+            <div class="loupan-right">
+                <div class="loupan-right-left">
+                    <a href=""><img src="img/zjgd22.jpg" alt=""></a>
+                    <p>首创国际7-2-901在建工地</p>
+                    <p>所在小区：首创国际</p>
+                    <p><a href="">点击查看详情 &gt;&gt;</a></p>
+                </div>
+                <div class="loupan-right-right">
+                    <h1>在建工地</h1>
+                    <p><a href="">中泽纯净3-1-1302在建工地</a></p>
+                    <p><a href="">都市广场1-2-1603在建工地</a></p>
+                    <p><a href="">西部丽景6-1-1601在建工地</a></p>
+                    <p><a href="">漫香堤2-3-702在建工地</a></p>
+                    <p><a href="">天泰雨泽园1-2-1402在建工地</a></p>
+                    <p><a href="">朝南新苑4-3-1303在建工地</a></p>
+                    <p><a href="">都市广场1-1-1203在建工地</a></p>
+                    <p><a href="">格林花园7-1-2101在建工地</a></p>
+                    <p><a href="">绿地卢浮公馆在建工地</a></p>
+                    <p><a href="">华都公园里 施工阶段-完工验收</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--热装楼盘结束-->
+    <!--品牌保障开始-->
+    <div class="ppbz-container" style="padding-top: 0;">
+        <div class="ppbz-main">
+            <div class="anli-title">
+                <span>品牌保障</span>
+                <span class="span2">[产品全球甄选，安全环保，值得信赖]</span>
+            </div>
+            <ul>
+                <li><img src="img/ppbz1.jpg" alt=""></li>
+                <li>
+                    <div class="txt-title">
+                        <img src="img/no.1.png" alt="">
+                        <p>环保</p>
+                    </div>
+                    <div class="txt-con">　
+                        "主动环保"的家装服务体系，已经得到数万户家庭的认可。
+                    </div>
+                </li>
+                <li><img src="img/ppbz2.jpg" alt=""></li>
+                <li>
+                    <div class="txt-title">
+                        <img src="img/no.1.png" alt="">
+                        <p>材料</p>
+                    </div>
+                    <div class="txt-con">　
+                        与数百家主材、电器、家具企业建立了合作联盟的关系。选择家装材料更轻松，所见即所得。
+                    </div>
+                </li>
+                <li>
+                    <div class="txt-title">
+                        <img src="img/no.1.png" alt="">
+                        <p>实力</p>
+                    </div>
+                    <div class="txt-con">　
+                        拥有多名工作经验超过10年的工厂，管理着一支数人的施工队伍，施工严格规范
+                    </div>
+                </li>
+                <li><img src="img/ppbz3.jpg" alt=""></li>
+                <li>
+                    <div class="txt-title">
+                        <img src="img/no.1.png" alt="">
+                        <p>高水平施工</p>
+                    </div>
+                    <div class="txt-con">　
+                        公司管理着一支数人的施工队伍，施工严格规范，为客户打造全方位放心工程。
+                    </div>
+                </li>
+                <li><img src="img/ppbz4.jpg" alt=""></li>
+            </ul>
+        </div>
+    </div>
+    <!--品牌保障结束-->
+    <!--装修百科开始-->
+    <div class="zxbk-container">
+        <div class="zxbk-main">
+            <div class="anli-title">
+                <span>装修百科</span>
+                <span class="span2">[带给你最新的中国装修动态、装修资讯 ,了解最新装修行情]</span>
+            </div>
+            <div class="zxbk-fenlei">
+                <ul>
+                    <li style="margin-left: 577px">
+                        <a href="">装修知识</a>
+                    </li>
+                    <li class="jc">
+                        <span>| &nbsp;</span>
+                        <a href="">装修建材</a>
+                        <span> &nbsp;|</span>
+                    </li>
+                    <li>
+                        <a href="">装修风水</a>
+                    </li>
+                    <li class="lc">
+                        <a href="">装修流程</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="zxbk-left">
+                <div class="zxbk-left-left">
+                    <img src="img/zxl1.jpg" alt="">
+                    <h1 class="t">
+                        <a href="">你还在纠结阳台与客厅要不要做隔断吗？快速戳，立马get！</a>
+                    </h1>
+                    <p>
+                        &nbsp; &nbsp;大家在装修的过程中，会遇到一些设计上面的问题，比如，客厅外规划阳台，是现在很多户型常见的格局之一，但是考虑到家中空间的大小及外 ....
+                    </p>
+                    <p class="xq">
+                        <a href="">详情 &gt;&gt;</a>
+                    </p>
+                </div>
+                <div class="zxbk-left-right">
+                    <ul>
+                        <li>
+                            <img src="img/zxl2.jpg" alt="">
+                            <div class="li-text">
+                                <h1>
+                                    <a href="">旧房翻新"八大优化"原则</a>
+                                </h1>
+                                <p>
+                                <p class="desc">旧房翻新“八大优化”原则，让你不在苦恼！旧房改造想要做好，必须要花费一番....</p>
+                                </p>
+                                <p class="xq">
+                                    <a href="">详情 &gt;&gt;</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/zxl3.jpg" alt="">
+                            <div class="li-text">
+                                <h1>
+                                    <a href="">旧房翻新"八大优化"原则</a>
+                                </h1>
+                                <p>
+                                <p class="desc">旧房翻新“八大优化”原则，让你不在苦恼！旧房改造想要做好，必须要花费一番....</p>
+                                </p>
+                                <p class="xq">
+                                    <a href="">详情 &gt;&gt;</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="img/zxl4.jpg" alt="">
+                            <div class="li-text">
+                                <h1>
+                                    <a href="">装修预算的陷阱在哪,如何避免?</a>
+                                </h1>
+                                <p>
+                                <p class="desc">装修预算的陷阱在哪,如何避免?记者在长期的房屋装修走访调查中从业主那里了解到....</p>
+                                </p>
+                                <p class="xq">
+                                    <a href="">详情 &gt;&gt;</a>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="zxbk-right">
+                <p class="zxbk-right-title1">如何快速读懂装修预算表并避免装修预算陷阱</p>
+                <img src="img/zxr1.jpg" alt="">
+                <p class="con1">
+                    　　如何快速读懂装修预算表并避免装修预算陷阱.大部分....
+                </p>
+                <p class="xq">
+                    <a href="">详情 &gt;&gt; </a>
+                </p>
+                <p class="zxbk-right-title2">
+                    <a href="">100平米水电改造装修预算需要多少钱?</a>
+                </p>
+                <p class="zxbk-right-title2">
+                    <a href="">怎样做到装修预算不超支?</a>
+                </p>
+                <p class="zxbk-right-title2">
+                    <a href="">有效降低装修预算的22个方法你知道多少?</a>
+                </p>
+                <p class="zxbk-right-title2" style="font-weight: normal;border: 0">
+                    <a href="">更多>></a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--装修百科结束-->
+    <!--无忧售后开始-->
+    <div class="shouhou-container" style="padding-top: 0;">
+        <div class="shouhou-main">
+            <div class="anli-title">
+                <span>无忧售后</span>
+                <span class="span2">[7×24小时全天候管家式服务，让您的家装省心，安心，放心！]</span>
+            </div>
+            <div class="shouhou-con">
+                <div class="line"></div>
+                <ul class="yuan">
+                    <li>
+                        <div class="circle"></div>
+                        <div class="vline vline1"></div>
+                        <div class="icon i1"></div>
+                    </li>
+                    <li>
+                        <div class="circle"></div>
+                        <div class="vline vline2"></div>
+                        <div class="icon i2"></div>
+                    </li>
+                    <li>
+                        <div class="circle"></div>
+                        <div class="vline vline3"></div>
+                        <div class="icon i3"></div>
+                    </li>
+                    <li>
+                        <div class="circle"></div>
+                        <div class="vline vline4"></div>
+                        <div class="icon i4"></div>
+                    </li>
+                    <li>
+                        <div class="circle"></div>
+                        <div class="vline vline5"></div>
+                        <div class="icon i5"></div>
+                    </li>
+                    <li>
+                        <div class="circle"></div>
+                        <div class="vline vline6"></div>
+                        <div class="icon i6"></div>
+                    </li>
+                    <li>
+                        <div class="circle"></div>
+                        <div class="vline vline7"></div>
+                        <div class="icon i7"></div>
+                    </li>
+                    <li>
+                        <div class="circle"></div>
+                        <div class="vline vline8"></div>
+                        <div class="icon i8"></div>
+                    </li>
+                </ul>
+                <ul class="txt">
+                    <li class="t-1">1.家装咨询</li>
+                    <li class="t-2">2.确认设计师</li>
+                    <li class="t-3">3.签订设计协议</li>
+                    <li class="t-4">4.设计测量</li>
+                    <li class="t-5">5.签订装修合同</li>
+                    <li class="t-6">6.施工，生产</li>
+                    <li class="t-7">7.验收安装</li>
+                    <li class="t-8">8.售后保修</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--无忧售后结束-->
+
+    <!--合作品牌开始-->
+    <div class="hzpp-container" style="padding-top: 0;">
+        <div class="hzpp-main">
+            <div class="anli-title">
+                <span>合作品牌</span>
+                <span class="span2">[多个品牌与我们合作，让装修的客户更放心，安心！]</span>
+            </div>
+            <div class="hzpp-con">
+                <ul>
+                    <li><a href=""><img src="img/hzpp1.jpg" alt=""></a></li>
+                    <li><a href=""><img src="img/hzpp2.jpg" alt=""></a></li>
+                    <li><a href=""><img src="img/hzpp3.jpg" alt=""></a></li>
+                    <li><a href=""><img src="img/hzpp4.jpg" alt=""></a></li>
+                    <li><a href=""><img src="img/hzpp5.jpg" alt=""></a></li>
+                    <li><a href=""><img src="img/hzpp6.jpg" alt=""></a></li>
+                    <li><a href=""><img src="img/hzpp7.jpg" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--合作品牌结束-->
+</main>
+<!--主体内容结束-->
+
+<!--footer开始-->
+<footer>
+    <div class="footer-main">
+        <ul>
+            <li>
+                <p><a href="">装修案例</a></p>
+                <a href="">经典案例</a>
+                <a href="">精修实景</a>
+                <a href="">旧房翻新</a>
+            </li>
+            <li>
+                <p><a href="">设计团队</a></p>
+                <a href="">主任设计师</a>
+                <a href="">首席设计师</a>
+                <a href="">精英设计师</a>
+            </li>
+            <li>
+                <p><a href="">装修百科</a></p>
+                <a href="">装修知识</a>
+                <a href="">装修选材</a>
+                <a href="">装修风水</a>
+                <a href="">装修流程</a>
+                <a href="">注意事项</a>
+            </li>
+            <li>
+                <p><a href="">关于我们</a></p>
+                <a href="">公司简介</a>
+                <a href="">公司文化</a>
+                <a href="">公司动态</a>
+                <a href="">客户服务</a>
+                <a href="">发展流程</a>
+                <a href="">联系我们</a>
+            </li>
+            <li>
+                <p><a href="">优惠活动</a></p>
+                <a href="">最新活动</a>
+                <a href="">往期活动</a>
+            </li>
+            <li>
+                <p><a href="">品牌保障</a></p>
+                <a href="">合作品牌</a>
+                <a href="">德系欧标</a>
+                <a href="">无忧售后</a>
+            </li>
+        </ul>
+        <div class="bottom-saoyisao">
+            <div class="title">扫一扫&nbsp;&nbsp;&nbsp;关注我们</div>
+            <div class="weixin">
+                <img src="img/ewm.jpg" alt="">
+                <p>官方微信 </p>
+            </div>
+            <div class="weibo">
+                <img src="img/wbewm.jpg" alt="">
+                <p>官方微博 </p>
+            </div>
+        </div>
+    </div>
+    <div class="lianjie">
+        <div class="tit">友情链接:</div>
+    </div>
+    <div class="bottom-banquan">
+        <p>
+            <span class="title">版权所有：山西都市时空装饰工程有限公司 </span>
+            <span style="margin-left:20px;"><a href="">网站地图</a></span>
+            <span style="margin-left:20px;"><a href="" target="_blank">业务范围</a></span>
+            <span style="margin-left:20px;"><a href="" target="_blank">网上预约</a></span>
+            <span style="margin-left:20px;"><a href="">热装楼盘</a></span>
+            <span style="margin-left:20px;"><a href="">在建工地</a></span>
+            <span style="float: right;color: #fff">技术支持：<a href="" style="color: #fff">太原国远天成网络科技有限公司</a></span>
+        </p>
+    </div>
+</footer>
+<!--footer结束-->
+
+</body>
+<script src="js/main.js"></script>
+</html>

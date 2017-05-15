@@ -1,0 +1,16 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing:border-box;
+	text-decoration: none;  /* a标签是有下划线的，此条语句是为了去除标签下的下划线 */
+}
+a{
+	color: #808080;
+}
+<style>
+	/* 清除默认样式，群组选择器： */
+	ul,li,ol{
+		list-style: none;
+	}
+</style>

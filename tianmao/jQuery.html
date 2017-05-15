@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <style>
+		.totops{
+			width: 50px;
+			height: 50px;
+			background: red;
+			position: absolute;
+			left: 50%;
+			margin-right: 677px;
+			bottom: 300px;
+			z-index: 50;
+		}
+		.prev,.next{
+			width: 20px;
+			height: 50px;
+			font-size: 30px;
+			/* background: #e8e8e8; */
+			z-index: 50;
+			color: #999;
+			position: absolute;
+			cursor: pointer;
+		}
+		.prev{
+			top: 50%;
+			left: 85px;
+		}
+		.next{
+			top: 50%;
+			right: 85px;
+		}
+		.dingbu{
+			width: 100%;
+			height: 30px;
+			background: red;
+			position: fixed;
+			left: 0;
+			top: -30px;
+			z-index: 999;
+		}
+		.contentjq{
+			width: 1236px;
+			height: 500px;
+			margin: 0 auto;
+			background: #adad91;
+			margin-bottom: 10px;
+			padding: 20px;
+		}
+		.banner-daohang-bannertu{
+			position: relative;
+		}
+		.dian{
+			bottom: 50px
+		}
+    </style>
+</head>
+<body>
+	<div class="dingbu"></div>
+	<div class="banner">
+	    <div class="banner-daohang-kuang">
+	        <div class="banner-daohang-bannertu">
+	            <!-- banner图 -->
+	            <div class="banner-box">
+	                <ul class="banner-tu">
+	                    <li class="active">
+	                        <a href=""><img src="img/banner1.jpg" alt=""></a>
+	                    </li>
+	                    <li>
+	                        <a href=""><img src="img/banner2.jpg" alt=""></a>
+	                    </li>
+	                    <li>
+	                        <a href=""><img src="img/banner3.jpg" alt=""></a>
+	                    </li>
+	                    <li>
+	                        <a href=""><img src="img/banner4.jpg" alt=""></a>
+	                    </li>
+	                    <li>
+	                        <a href=""><img src="img/banner5.jpg" alt=""></a>
+	                    </li>
+	                    <li>
+	                        <a href=""><img src="img/banner6.jpg" alt=""></a>
+	                    </li>
+	                </ul>
+	            </div>
+	        </div>
+	    </div>
+	    <ul class="dian">
+	        <li class="active"></li>
+	        <li></li>
+	        <li></li>
+	        <li></li>
+	        <li></li>
+	        <li style="margin-right: 0;"></li>
+	    </ul>
+	    <div class="prev"> < </div>
+	    <div class="next"> > </div>
+	</div>
+	<div class="celan" style="z-index: 50">
+    <ul>
+        <li style="background: #DD2727">
+            <a href="" style="color: #fff;">
+                <div class="celan-text2">导航</div>
+            </a>
+        </li>
+        <li class="celan2 celan-li">
+
+            <div class="celan-text1">美丽人生</div>
+
+        </li>
+        <li class="celan3 celan-li">
+
+            <div class="celan-text1">潮电酷玩</div>
+
+        </li>
+        <li style="background: #64C333" class="celan4 celan-li">
+
+            <div class="celan-text1">居家生活</div>
+
+        </li>
+        <li class="celan5 celan-li">
+
+            <div class="celan-text1">打造爱巢</div>
+
+        </li>
+        <li class="celan6 celan-li">
+
+            <div class="celan-text1">户外出行</div>
+
+        </li>
+        <li class="celan7 celan-li">
+
+            <div class="celan-text1">亲子时光</div>
+
+        </li>
+        <li class="celan8 celan-li">
+
+            <div class="celan-text1">猜你喜欢</div>
+
+        </li>
+        <li class="totop" style="background: #ACACAC">
+            <div class="celan-text1">︿ 顶部</div>
+        </li>
+    </ul>
+</div>
+	<div class="contentjq">美丽人生</div>
+	<div class="contentjq">潮店酷玩</div>
+	<div class="contentjq">居家生活</div>
+	<div class="contentjq">打造爱巢</div>
+	<div class="contentjq">户外出行</div>
+	<div class="contentjq">亲子时光</div>
+	<div class="contentjq">猜你喜欢</div>
+</body>
+<script src="js/JQuery.js"></script>
+<script>
+	var btns = $(".dian li");
+	var cons = $(".banner-tu li");
+	var bigbox = $(".banner");
+	var bgcolor = ["#E8E8E8", "#9AD6FA", "#FCFCFC", "#D50334", "#9A00DB", "#FCFCFC"];
+	btns.click(function () {
+	    var index = $(this).index();
+	    num = index;
+	    btns.filter(".active").removeClass("active").end().filter(this).addClass("active");
+	    cons.filter(".active").removeClass("active").end().eq(index).addClass("active");
+	});
+	var t = setInterval(movebener, 3000);
+	var num = 0;
+	function movebener() {
+	    num++;
+	    if (num == btns.length) {
+	        num = 0;
+	    }
+	    if (num == -1) {
+	        num = btns.length - 1;
+	    }
+	    btns.filter(".active").removeClass("active").end().eq(num).addClass("active");
+	    cons.filter(".active").removeClass("active").end().eq(num).addClass("active");
+	}
+	bigbox.hover(function () {
+	    clearInterval(t)
+	},function () {
+	    t=setInterval(movebener, 3000);
+	});
+	$(".prev").click(function () {
+		num-=2;
+		movebener();
+	});
+	$(".next").click(function () {
+		movebener();
+	});
+
+	$(window).scroll(function(){
+		var st=$(this).scrollTop();
+		if(st>200){
+			$(".dingbu").css("top",0);
+			$(".celan").css("width",35);
+			$(".celan").css("height",332);
+
+		}else{
+			$(".dingbu").css("top",-30);
+			$(".celan").css("width",0);
+			$(".celan").css("height",0);
+		}
+			
+	})
+	$(".totop").click(function() {
+		//$(window).scrollTop(0); 
+		$("html,body").animate({scrollTop:0},1000,"linear");
+	});
+
+	var arrjq=[];
+	$(".contentjq").each(function(index,ele) {
+		arrjq.push($(this).offset().top);
+		
+	});
+	$(".celan-li").each(function(index,ele) {
+		$(ele).click(function(){
+			$("html,body").animate({scrollTop:(arrjq[index]-30)}, 1000,"linear");
+		})
+	});
+</script>
+</html>

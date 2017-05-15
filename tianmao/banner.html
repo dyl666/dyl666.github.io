@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/base.css">
+    <style>
+        .banner {
+            width: 100%;
+            height: 300px;
+            position: relative;
+            background: #e8e6ee;
+        }
+
+        .banner-box .banner-tu {
+            width: 800px;
+            height: 300px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .banner-box .banner-tu li {
+            width: 800px;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        .banner-box .banner-tu li:first-child{
+            z-index: 5;
+        }
+
+        .banner-box .banner-tu li img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .dian {
+            width: 230px;
+            height: 30px;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 999;
+        }
+
+        .dian li {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background:pink;
+            float: left;
+            margin: 0 10px;
+            /*border: 2px solid #807277;*/
+        }
+
+        .dian .active{
+            background: red;
+        }
+        @keyframes leftOut {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: -800px;
+            }
+        }
+
+        .leftout {
+            animation: leftOut 1s ease-in;
+        }
+
+        @keyframes leftIn {
+            0% {
+                left: 800px;
+            }
+            100% {
+                left: 0;
+            }
+        }
+
+        .leftin {
+            animation: leftIn 1s ease-in;
+        }
+        @keyframes rightOut {
+            0% {
+                left: 0;
+            }
+            100% {
+                left: 800px;
+            }
+        }
+
+        .rightout {
+            animation: rightOut 1s ease-in;
+        }
+
+        @keyframes rightIn {
+            0% {
+                left: -800px;
+            }
+            100% {
+                left: 0;
+            }
+        }
+
+        .rightin {
+            animation: rightIn 1s ease-in;
+        }
+    </style>
+</head>
+<body>
+<!-- Banner开始 -->
+<div class="banner">
+    <div class="banner-box">
+        <ul class="banner-tu">
+            <li>
+                <a href=""><img src="img/banner1.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="img/banner2.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="img/banner3.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="img/banner4.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="img/banner5.jpg" alt=""></a>
+            </li>
+            <li>
+                <a href=""><img src="img/banner6.jpg" alt=""></a>
+            </li>
+        </ul>
+        <ul class="dian">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li style="margin-right: 0;"></li>
+        </ul>
+    </div>
+</div>
+</body>
+<script>
+    /*var bannerbox = document.querySelector(".banner-box");
+     var pictures = document.querySelectorAll(".banner-tu li");
+     var dots = document.querySelectorAll(".dian li");
+     dots.forEach(function (ele, index) {
+     ele.onmouseover = function () {
+     num = index;
+     for (var i = 0; i < dots.length; i++) {
+     dots[i].style.background = "rgba(0,0,0,0.5)";
+     pictures[i].style.opacity = 0.5;
+     pictures[i].style.zIndex = 2;
+     }
+     this.style.background = "rgba(255,255,255,0.5)";
+     pictures[index].style.opacity = 1;
+     pictures[index].style.zIndex = 18;
+     }
+     });
+     var t = setInterval(move, 2000);
+     var num = 0;
+     function move() {
+     num++;
+     if (num == dots.length) {
+     num = 0;
+     }
+     for (var i = 0; i < dots.length; i++) {
+     dots[i].style.background = "rgba(0,0,0,0.5)";
+     pictures[i].style.zIndex = 2;
+     pictures[i].style.opacity = 0.5;
+     }
+     dots[num].style.background = "rgba(255,255,255,0.5)";
+     pictures[num].style.opacity = 1;
+     pictures[num].style.zIndex = 18;
+     }
+     bannerbox.onmouseover = function () {
+     clearInterval(t);
+     };
+     bannerbox.onmouseout = function () {
+     t = setInterval(move, 2000);
+     };*/
+</script>
+<script>
+    var imgs = document.querySelectorAll(".banner-tu li");//获取每一张图片
+    var box = document.querySelector(".banner-box");
+    var btns = document.querySelectorAll(".dian li");
+    console.log(btns)
+    var t = setInterval(move, 3000);
+    var now = 0;//要飞出去的那个img的下标
+    var z = 10;
+    //左
+    function move() {
+        imgs[now].classList.add("leftout");
+        btns[now].classList.remove("active");
+        now++;
+        if (now == imgs.length) {
+            now = 0;
+        }
+        imgs[now].classList.add("leftin");
+        btns[now].classList.add("active");
+        imgs[now].style.zIndex = z++;
+
+    }
+    imgs.forEach(function (img) {
+        img.addEventListener("animationend", function () {
+            img.className = "";
+        })
+    });
+    box.onmouseover=function () {
+        clearInterval(t);
+    };
+    box.onmouseout=function () {
+        t=setInterval(move,3000);
+    };
+    btns.forEach(function (btn,index) {
+      btn.onclick=function () {
+          if(now==index){
+            return;
+          }
+          if(now<index){
+              imgs[now].classList.add("leftout");
+              imgs[index].classList.add("leftin");
+          }else{
+              imgs[now].classList.add("rightout");
+              imgs[index].classList.add("rightin");
+          }
+          btns[now].classList.remove("active");
+          btn.classList.add("active");
+          imgs[index].style.zIndex=z++;
+          now=index;
+      }
+    })
+</script>
+</html>
