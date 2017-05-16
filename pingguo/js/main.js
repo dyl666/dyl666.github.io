@@ -10,8 +10,8 @@ Array.from(lunbo).forEach(function (ele, index) {
         clearTimeout(t);
         t = setTimeout(function () {
             num = index;
-            nowlunbo.style.background = "#333";
-            lunbo[index].style.background = "#000";
+            nowlunbo.style.background = "#000";
+            lunbo[index].style.background = "#333";
             nowlunbo = lunbo[index];
             nowbannertu.style.opacity = 0;
             nowbannertu.style.zIndex = 1;

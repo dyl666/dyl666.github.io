@@ -58,26 +58,38 @@ header {
 }
 
 .header-right li {
+    height: 30px;
     float: left;
     margin-right: 5px;
+    cursor: default;
+    position: relative;
 }
-
-.header-right span {
-    padding-right: 3px;
+.sec{
+    padding: 10px 0 10px 15px;
+    overflow: hidden;
 }
-
 .header-right li a {
     padding: 0 3px 0 3px;
+    color: #999;
+    font-family: verdana\,simsun;
+}
+
+.header-right li a:hover {
+    color: #c81623;
 }
 
 .header-right li .jt {
     display: inline-block;
-    line-height: 30px;
+    padding-right: 3px;
     margin-left: -6px;
 }
 
 .header-right li .dl {
     padding-right: 0;
+}
+
+.header-right li span {
+    cursor: default;
 }
 
 .header-right li .zc {
@@ -275,11 +287,13 @@ main {
     font-size: 12px;
     color: #fff;
 }
-.banner-middle{
+
+.banner-middle {
     width: 790px;
     height: 100%;
     display: inline-block;
 }
+
 .bannertu-box {
     width: 790px;
     height: 340px;
@@ -292,7 +306,8 @@ main {
     width: 790px;
     height: 340px;
 }
-.bannertu-ul li{
+
+.bannertu-ul li {
     width: 790px;
     height: 340px;
     cursor: pointer;
@@ -301,7 +316,8 @@ main {
     top: 0;
     transition: all 1s ease-in-out;
 }
-.bannertu-ul li:first-child{
+
+.bannertu-ul li:first-child {
     z-index: 5;
 }
 
@@ -315,9 +331,10 @@ main {
     font-size: 0;
     padding: 4px 8px;
     border-radius: 12px;
-    background-color: hsla(0,0%,100%,.3);
+    background-color: hsla(0, 0%, 100%, .3);
 }
-.bannertu-box .dian li{
+
+.bannertu-box .dian li {
     display: inline-block;
     margin-right: 10px;
     width: 12px;
@@ -326,12 +343,15 @@ main {
     background-color: #fff;
     cursor: pointer;
 }
-.bannertu-box .dian li:nth-child(1){
+
+.bannertu-box .dian li:nth-child(1) {
     background: #db192a;
 }
-.bannertu-box .dian li:nth-child(8){
+
+.bannertu-box .dian li:nth-child(8) {
     margin-right: 0;
 }
+
 .bannertu-ul2 {
     width: 100%;
     height: 130px;
@@ -346,6 +366,7 @@ main {
 .bannertu-ul2 li:first-child {
     margin-right: 10px;
 }
+
 .banner-right {
     float: right;
     margin-left: 10px;
