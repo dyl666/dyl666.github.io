@@ -1,7 +1,15 @@
+@font-face {
+    font-family: 'iconfont';  /* project id 305163 */
+    src: url('//at.alicdn.com/t/font_tfbbd71ol7rjm7vi.eot');
+    src: url('//at.alicdn.com/t/font_tfbbd71ol7rjm7vi.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_tfbbd71ol7rjm7vi.woff') format('woff'),
+    url('//at.alicdn.com/t/font_tfbbd71ol7rjm7vi.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_tfbbd71ol7rjm7vi.svg#iconfont') format('svg');
+}
 body {
     font-family: "黑体";
-    background: #2f3238;
     color: #fff;
+    background: #000;
 }
 
 .banner {
@@ -25,23 +33,36 @@ body {
     position: absolute;
     left: 0;
     top: 0;
-    transition: all 3s ease-in;
+    transition: all 3s;
     opacity: 0;
 }
 
-.bannertu li.active {
+ .bannertu li.active {
     z-index: 2;
     opacity: 1;
 }
-
+/*.bannertu li:first-child{
+    z-index: 2;
+    opacity: 1;
+}*/
 .bannertu img {
     width: 100%;
     height: 100%;
 }
 
 .dian {
+    position: absolute;
     width: 100%;
     height: 50px;
+    z-index:10000;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 40px;
+    /* background: red; */
+    padding:0 650px ;
+    display: flex;
+    justify-content: space-between;
 }
 
 .dian li {
@@ -49,7 +70,8 @@ body {
     height: 10px;
     border-radius: 50%;
     background: #fff;
-    opacity: 0;
+    /* opacity: 0; */
+    float: left;
 }
 
 .zhezhao {
@@ -100,7 +122,7 @@ body {
     width: 20%;
     float: left;
     text-align: center;
-    line-height: 76px;
+    line-height:42px;
     border: 1px solid #fff;
     border-radius: 3px;
     transition: all .3s ease-in;
@@ -108,9 +130,10 @@ body {
 }
 
 .banner-main ul li:hover {
-    background: #A2581F;
+    /* background: #A2581F; */
+    background: rgba(255, 0, 0, 0.61);
     /* transform: translateX(10px); */
-    transform: scale(1.02, 1.02);
+    transform: scale(1.03, 1.03);
 }
 
 .banner-main ul li img {
@@ -153,7 +176,7 @@ body {
     color: #ffffff;
     font-size: 46px;
     font-weight: 700;
-    text-shadow: 0 5px 2px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 5px 2px rgba(0, 0, 0, 0.5);
 }
 
 .banner h1 {
@@ -162,7 +185,7 @@ body {
 
 .banner h1 span {
     font-family: "平方";
-    color: #a2581f;
+    color: red;
 }
 
 .banner .h1-2 {
@@ -193,15 +216,14 @@ body {
     position: relative;
     /*background: pink;*/
 }
-.zwjs-zp{width:330px;height:200px;position: absolute;font-size:16px;left: 0;right:0;top:0;bottom:0;margin:auto;}
-.zwjs-my{width:150px;height:40px;font-size: 14px;color:#fff;position: absolute;left:-20px;bottom:40px;font-family:"Gray Design";}
-.zwjs-name{width:70px;height:30px;position:absolute;right:0;top:20px;color:#eee;text-align: center;line-height:30px;border-bottom:2px solid red}
+.zwjs-zp{width:330px;height:200px;position: absolute;font-size:16px;left: 0;right:0;top:124px;margin:auto;}
+.zwjs-my{width:150px;height:40px;font-size: 14px;color:#f00;position: absolute;left:-20px;bottom:40px;font-family:"Gray Design";}
+.zwjs-name{width:70px;height:30px;font-size:20px;position:absolute;right:0;top:20px;color:#eee;text-align: center;line-height:30px;border-bottom:2px solid red}
 .zwjs-ename{width:100px;height:30px;right:-30px;top:50px;position: absolute;font-family:Helvetica;font-size:12px;text-align:center;line-height:30px;color:#ccc;font-family:"Gray Design";}
 .zwjs-zp-bk{width:224px;height:270px;border:2px solid red;position: absolute;left:30px;top:-50px}
-.zwjs-img{width:220px;height:252px;position:absolute;background:blue;left:0;bottom:0}
-.zwjs-img a{display: block;width: 220px;height:252px;}
-
-.zwjs-img img{width:220px;height:252px;}
+.zwjs-img{width:220px;height:270px;position:absolute;left:0;top:0}
+.zwjs-img a{display: block;width: 220px;height:270px;}
+.zwjs-img img{width:220px;height:266px;}
 .zwjs-right {
     width: 50%;
     height: 500px;
@@ -227,14 +249,14 @@ body {
 /*我的技能*/
 /*关于我*/
 
-.abm-bg{width:100%;height:720px;position: relative;background: url(../img/banner4.jpg);background-attachment:fixed;background-size: cover;background-position: center center;}
+.abm-bg{width:100%;height:720px;position: relative;background: url(../img/banner4.jpg);background-size: cover;background-position: center center;}/*background-attachment:fixed;*/
 .abm-inner{height:720px;margin:0 auto;}
-.abm-title{width:200px;height:100px;margin:0 auto;}
+.abm-title{width:200px;height:100px;margin:0 auto;margin-top: 20px;}
 .abm-img{width:100px;height:100px;border-radius:50%;margin:10px auto;overflow: hidden}
 .abm-bottom{width:100%;height:460px;margin-top:30px;position: relative;}
 .abm-con{width:500px;height:360px;margin-top:50px;}
 .abm-left{left:-500px;position: absolute;top:0;}
-.abm-right{right:-500px;position: absolute;right}
+.abm-right{right:-500px;position: absolute;}
 .abm-center{width:1px;height:400px;float: left;margin:0 auto;background:#ccc;position: absolute;left:0;right:0;margin: auto}
 .more{width:80px;height:30px;border-radius:10px;font-size: 14px;color: #eee;text-align: center;line-height: 30px;border:1px solid #eee;margin:20px auto;cursor: pointer;transition:all 0.5s linear;}
 .more:hover{background:#ddd;color:#333;font-size: 16px}
@@ -247,10 +269,10 @@ body {
 .abm-icon3{top:240px;}
 .abm-icon4{top:320px;}
 
-.abm-list{width:500px;height:100px;margin-top:60px;position: relative;font-size: 14px;text-align: center;color:#fff;background:url(../img/abmlistbg1.png);}
+.abm-list{width:500px;height:100px;margin-top:60px;position: relative;font-size: 14px;text-align: center;color:#fff;background:url(../img/abmlistbg1.png);}/**/
 .abm-list-l{width:200px;height: 50px;position: absolute;left:30px;top:20px;line-height: 25px}
 .abm-list-r{width:100px;height: 30px;position: absolute;right:50px;top:10px;line-height: 30px}
-.abm-list1{width:500px;height:100px;margin-top: 70px;position: relative;color:#fff;background: url(../img/abmlistbg2.png);font-size: 14px;}
+.abm-list1{width:500px;height:100px;margin-top: 70px;position: relative;color:#fff;font-size: 14px;background: url(../img/abmlistbg2.png);}/**/
 .abm-list1-l{width:100px;height: 30px;position: absolute;left:60px;top:20px;line-height: 25px;}
 .abm-list1-r{width:270px;height: 50px;position: absolute;right:0px;top:10px;line-height: 30px;text-align: center;}
 .abm-an{width:150px;height:35px;border-radius: 5px;border:1px solid #fff;position: absolute;left:0;right:0;margin:auto;bottom:0px;font-size:16px;color:#eee;font-family:Gray Design;text-align: center;line-height: 35px;background: #000;transition:all 0.3s linear;cursor: pointer;}
@@ -289,6 +311,7 @@ body {
     overflow: hidden;
     margin: 80px 0;
     background-color: #2f3238;
+    background: url("../img/banner5.jpg");
 }
 
 .product-main {
@@ -366,8 +389,8 @@ footer {
     background: #818182;
     float: left;
     font-family: "仿宋";
-    /* background: url('../img/hero-2.jpg') center center no-repeat; */
-    /* background-size: 100%; */
+     background: url('../img/hero-2.jpg') center center no-repeat;
+     background-size:cover;
 }
 
 .footer-main {

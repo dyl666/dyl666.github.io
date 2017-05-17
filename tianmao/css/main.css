@@ -461,11 +461,11 @@ nav .sou ul li:nth-child(9) {
     position: absolute;
     left: 0;
     top: 0;
-    transition: all 2s;
     opacity: 0;
 }
 
 .banner-box .banner-tu li.active {
+    z-index: 2;
     opacity: 1;
 }
 
@@ -474,10 +474,6 @@ nav .sou ul li:nth-child(9) {
     height: 100%;
 }
 
-.banner-box .banner-tu li:first-child {
-    opacity: 1;
-    /*z-index: 2;*/
-}
 
 /* banner轮播点开始 */
 .dian {

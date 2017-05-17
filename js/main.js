@@ -1,58 +1,31 @@
-var lunbo = document.querySelectorAll(".dian li");
-var bannertu = document.querySelectorAll(".bannertu li");
-var banner = document.querySelector(".banner");
-var num = 0;
-var nowlunbo = lunbo[0];
-var nowbannertu = bannertu[0];
-var t = setInterval(move, 3000);
-Array.from(lunbo).forEach(function (ele, index) {
-    hover(ele, function () {
-        clearTimeout(t);
-        t = setTimeout(function () {
-            num = index;
-            nowlunbo.style.background = "#000";
-            lunbo[index].style.background = "#333";
-            nowlunbo = lunbo[index];
-            nowbannertu.style.opacity = 0;
-            nowbannertu.style.zIndex = 1;
-            bannertu[index].style.zIndex = 2;
-            bannertu[index].style.opacity = 1;
-            nowbannertu = bannertu[index];
-        }, 300)
-    }, function () {
-    })
+/*
 
+var btns = $(".dian li");
+var cons = $(".bannertu li");
+var bigbox = $(".banner");
+btns.click(function () {
+    var index = $(this).index();
+    num = index;
+    btns.filter(".active").removeClass("active").end().filter(this).addClass("active");
+    cons.filter(".active").removeClass("active").end().eq(index).addClass("active");
 });
-function move() {
+var t = setInterval(movebener, 3000);
+var num = 0;
+function movebener() {
     num++;
-    if (num == lunbo.length) {
+    console.log(num)
+    if (num == btns.length) {
         num = 0;
     }
     if (num == -1) {
-        num = lunbo.length - 1;
+        num = btns.length - 1;
     }
-    nowlunbo.style.background = "";
-    lunbo[num].style.background = "#333";
-    nowlunbo = lunbo[num];
-    nowbannertu.style.opacity = 0;
-    nowbannertu.style.zIndex = 1;
-    bannertu[num].style.zIndex = 2;
-    bannertu[num].style.opacity = 1;
-    nowbannertu = bannertu[num];
+    btns.filter(".active").removeClass("active").end().eq(num).addClass("active");
+    cons.filter(".active").removeClass("active").end().eq(num).addClass("active");
 }
-banner.onmouseover = function () {
-    clearInterval(t);
-};
-banner.onmouseout = function () {
-    t = setInterval(move, 3000);
-};
-/*
-var zuojian = document.querySelector(".banner-left-btn");
-var youjian = document.querySelector(".banner-right-btn");
-zuojian.onclick = function () {
-    num -= 2;
-    move();
-};
-youjian.onclick = function () {
-    move();
-};*/
+bigbox.hover(function () {
+    clearInterval(t)
+}, function () {
+    t = setInterval(movebener, 3000);
+});
+*/

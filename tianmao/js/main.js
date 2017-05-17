@@ -53,8 +53,8 @@ bigbox.onmouseout = function () {
 };
 
 //banner用JQuery写
-/*JQuery
-var btns = $(".dian li");
+// JQuery
+/*var btns = $(".dian li");
 var cons = $(".banner-tu li");
 var bigbox = $(".banner");
 var bgcolor = ["#E8E8E8", "#9AD6FA", "#FCFCFC", "#D50334", "#9A00DB", "#FCFCFC"];
@@ -64,7 +64,7 @@ btns.click(function () {
     btns.filter(".active").removeClass("active").end().filter(this).addClass("active");
     cons.filter(".active").removeClass("active").end().eq(index).addClass("active");
 });
-var t = setInterval(movebener, 2000);
+var t = setInterval(movebener, 3000);
 var num = 0;
 function movebener() {
     num++;
@@ -80,9 +80,9 @@ function movebener() {
 bigbox.hover(function () {
     clearInterval(t)
 }, function () {
-    t = setInterval(movebener, 2000);
-});*/
-
+    t = setInterval(movebener, 3000);
+});
+*/
 
 //banner下面
 var btns2 = document.querySelectorAll(".left-center-ul li");
@@ -247,11 +247,14 @@ $(window).scroll(function () {
 var colorarr=["#EA5F8D","#0AA6E8","#64C333","#F15453","#19C8A9","#F7A945","#000"];
 $(".celan-li").click(function () {
     var index=$(this).index()-1;
+    console.log(index);
     var ot=$(".leftbar").eq(index).offset().top;
     $("html,body").animate({scrollTop:ot});
 }).hover(function () {
     var index=$(this).index()-1;
+    // console.log(index);
     $(this).css("background",colorarr[index]);
+    console.log(index);
 },function () {
     $(this).css("background","")
 });
