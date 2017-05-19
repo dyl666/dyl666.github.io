@@ -58,11 +58,12 @@ var btns = $(".dian li");
 var cons = $(".banner-tu li");
 var bigbox = $(".banner");
 var bgcolor = ["#E8E8E8", "#9AD6FA", "#FCFCFC", "#D50334", "#9A00DB", "#FCFCFC"];
-btns.click(function () {
+btns.mouseover(function () {
     var index = $(this).index();
     num = index;
     btns.filter(".active").removeClass("active").end().filter(this).addClass("active");
     cons.filter(".active").removeClass("active").end().eq(index).addClass("active");
+    bigbox.css("background",bgcolor[index]);
 });
 var t = setInterval(movebener, 3000);
 var num = 0;
@@ -76,6 +77,7 @@ function movebener() {
     }
     btns.filter(".active").removeClass("active").end().eq(num).addClass("active");
     cons.filter(".active").removeClass("active").end().eq(num).addClass("active");
+    bigbox.css("background",bgcolor[num]);
 }
 bigbox.hover(function () {
     clearInterval(t)

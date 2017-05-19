@@ -2503,6 +2503,7 @@ ul.content6-fr li a img{
 div.content6-leftbtn{
     left:5px;
     font-size:12px;
+    cursor: pointer;
 }
 
 div.content6-rightbtn{

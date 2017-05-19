@@ -377,8 +377,9 @@ nav .sou ul li:nth-child(9) {
     width: 100%;
     height: 536px;
     position: relative;
-    background: #FFE4ED;
+    background: #E8E8E8;
     z-index: 1;
+    transition: all 2s;
 }
 
 /* banner轮播图开始 */
