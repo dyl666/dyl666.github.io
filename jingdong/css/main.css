@@ -2509,6 +2509,7 @@ div.content6-leftbtn{
 div.content6-rightbtn{
     right:5px;
     font-size:12px;
+    cursor: pointer;
 }
 
 .content6-leftbtn:hover{
