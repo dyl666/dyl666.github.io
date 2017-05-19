@@ -1,56 +1,56 @@
 //banner图
 //原生的办法
 /*var btns = document.querySelectorAll(".dian li");
-var cons = document.querySelectorAll(".banner-tu li");
-var bigbox = document.querySelector(".banner");
-var btnnow = btns[0];
-var connow = cons[0];
-var num = 0;
-var bgcolor = ["#E8E8E8", "#9AD6FA", "#FCFCFC", "#D50334", "#9A00DB", "#FCFCFC"];
-var tb;
-Array.from(btns).forEach(function (ele, index) {
-    hover(ele, function () {
-        clearTimeout(tb);
-        tb = setTimeout(function () {
-            num = index;
-            btnnow.style.background = "rgba(0,0,0,0.5)";
-            btns[index].style.background = "rgba(255,255,255,0.5)";
-            btnnow = btns[index];
-            connow.style.opacity = 0;
-            connow.style.zIndex = 1;
-            cons[index].style.zIndex = 2;
-            cons[index].style.opacity = 1;
-            connow = cons[index];
-            bigbox.style.background = bgcolor[index];
-        }, 300);
-    }, function () {
-    });
-});
-var t = setInterval(move, 3000);
-function move() {
-    num++;
-    if (num == btns.length) {
-        num = 0;
-    }
-    if (num == -1) {
-        num = btns.length - 1;
-    }
-    btnnow.style.background = "rgba(0,0,0,0.5)";
-    btns[num].style.background = "rgba(255,255,255,0.5)";
-    btnnow = btns[num];
-    connow.style.opacity = 0;
-    connow.style.zIndex = 1;
-    cons[num].style.zIndex = 2;
-    cons[num].style.opacity = 1;
-    connow = cons[num];
-    bigbox.style.background = bgcolor[num];
-}
-bigbox.onmouseover = function () {
-    clearInterval(t);
-};
-bigbox.onmouseout = function () {
-    t = setInterval(move, 3000);
-};*/
+ var cons = document.querySelectorAll(".banner-tu li");
+ var bigbox = document.querySelector(".banner");
+ var btnnow = btns[0];
+ var connow = cons[0];
+ var num = 0;
+ var bgcolor = ["#E8E8E8", "#9AD6FA", "#FCFCFC", "#D50334", "#9A00DB", "#FCFCFC"];
+ var tb;
+ Array.from(btns).forEach(function (ele, index) {
+ hover(ele, function () {
+ clearTimeout(tb);
+ tb = setTimeout(function () {
+ num = index;
+ btnnow.style.background = "rgba(0,0,0,0.5)";
+ btns[index].style.background = "rgba(255,255,255,0.5)";
+ btnnow = btns[index];
+ connow.style.opacity = 0;
+ connow.style.zIndex = 1;
+ cons[index].style.zIndex = 2;
+ cons[index].style.opacity = 1;
+ connow = cons[index];
+ bigbox.style.background = bgcolor[index];
+ }, 300);
+ }, function () {
+ });
+ });
+ var t = setInterval(move, 3000);
+ function move() {
+ num++;
+ if (num == btns.length) {
+ num = 0;
+ }
+ if (num == -1) {
+ num = btns.length - 1;
+ }
+ btnnow.style.background = "rgba(0,0,0,0.5)";
+ btns[num].style.background = "rgba(255,255,255,0.5)";
+ btnnow = btns[num];
+ connow.style.opacity = 0;
+ connow.style.zIndex = 1;
+ cons[num].style.zIndex = 2;
+ cons[num].style.opacity = 1;
+ connow = cons[num];
+ bigbox.style.background = bgcolor[num];
+ }
+ bigbox.onmouseover = function () {
+ clearInterval(t);
+ };
+ bigbox.onmouseout = function () {
+ t = setInterval(move, 3000);
+ };*/
 
 //banner用JQuery写
 // JQuery
@@ -63,7 +63,7 @@ btns.mouseover(function () {
     num = index;
     btns.filter(".active").removeClass("active").end().filter(this).addClass("active");
     cons.filter(".active").removeClass("active").end().eq(index).addClass("active");
-    bigbox.css("background",bgcolor[index]);
+    bigbox.css("background", bgcolor[index]);
 });
 var t = setInterval(movebener, 3000);
 var num = 0;
@@ -77,7 +77,7 @@ function movebener() {
     }
     btns.filter(".active").removeClass("active").end().eq(num).addClass("active");
     cons.filter(".active").removeClass("active").end().eq(num).addClass("active");
-    bigbox.css("background",bgcolor[num]);
+    bigbox.css("background", bgcolor[num]);
 }
 bigbox.hover(function () {
     clearInterval(t)
@@ -175,40 +175,40 @@ Array.from(lists).forEach(function (ele, index) {
 
 //左边导航
 var leftul = document.querySelector(".celan");
- var floorbtns = document.querySelectorAll(".celan ul .celan-li");//侧栏的li
- var leftbar = document.querySelectorAll(".content .leftbar");//每个内容部分
- var totop = document.querySelector(".totop");//回到顶部
- var totop2 = document.querySelector(".totop2");
- var topbar = document.querySelector(".top");
- window.onscroll = function () {
- var st = document.body.scrollTop;
- if (st > 800) {
- leftul.style.width = "35px";
- leftul.style.height = "332px";
- } else {
- leftul.style.width = "0";
- leftul.style.height = "0";
- }
- //顶部
- var obj = document.body;
- var str = obj.scrollTop;
- if (str > 300) {
- topbar.style.top = 0;
- } else {
- topbar.style.top = "-50px";
- }
- };
- Array.from(floorbtns).forEach(function (ele, index) {
- ele.onclick = function () {
- animate(document.body, {scrollTop: leftbar[index].offsetTop}, 500)
- };
- });
+var floorbtns = document.querySelectorAll(".celan ul .celan-li");//侧栏的li
+var leftbar = document.querySelectorAll(".content .leftbar");//每个内容部分
+var totop = document.querySelector(".totop");//回到顶部
+var totop2 = document.querySelector(".totop2");
+var topbar = document.querySelector(".top");
+window.onscroll = function () {
+    var st = document.body.scrollTop;
+    if (st > 800) {
+        leftul.style.width = "35px";
+        leftul.style.height = "332px";
+    } else {
+        leftul.style.width = "0";
+        leftul.style.height = "0";
+    }
+    //顶部
+    var obj = document.body;
+    var str = obj.scrollTop;
+    if (str > 300) {
+        topbar.style.top = 0;
+    } else {
+        topbar.style.top = "-50px";
+    }
+};
+Array.from(floorbtns).forEach(function (ele, index) {
+    ele.onclick = function () {
+        animate(document.body, {scrollTop: leftbar[index].offsetTop}, 500)
+    };
+});
 /* totop.onclick = function () {
  animate(document.body, {scrollTop: 0}, 500)
  };*/
- totop2.onclick = function () {
- animate(document.body, {scrollTop: 0}, 500)
- };
+totop2.onclick = function () {
+    animate(document.body, {scrollTop: 0}, 500)
+};
 //顶部固定
 /*btn.scrollTop=100;
  btn.onclick=function () {
@@ -221,43 +221,43 @@ $(window).scroll(function () {
     var flag1 = true;
     var flag2 = true;
     if (st > 500) {
-        if(flag1){
-            flag1=false;
-            flag2=true;
-            $(".celan").animate({width:36,height:333}).css("display","block");
-        }else{
-            if(flag2){
-                flag1=true;
-                flag2=false;
-                $(".celan").animate({width:0,height:0},function () {
-                    $(this).css("display","none");
+        if (flag1) {
+            flag1 = false;
+            flag2 = true;
+            $(".celan").animate({width: 36, height: 333}).css("display", "block");
+        } else {
+            if (flag2) {
+                flag1 = true;
+                flag2 = false;
+                $(".celan").animate({width: 0, height: 0}, function () {
+                    $(this).css("display", "none");
                 });
             }
         }
     }
     clearTimeout(to);
-    to=setTimeout(function () {
-        $(".leftbar").each(function (index,ele) {
-            if(st>$(ele).offset().top){
+    to = setTimeout(function () {
+        $(".leftbar").each(function (index, ele) {
+            if (st > $(ele).offset().top) {
                 $(".celan-li").eq(index).addClass("active").siblings().removeClass("active");
             }
         })
 
     })
 });
-var colorarr=["#EA5F8D","#0AA6E8","#64C333","#F15453","#19C8A9","#F7A945","#000"];
+var colorarr = ["#EA5F8D", "#0AA6E8", "#64C333", "#F15453", "#19C8A9", "#F7A945", "#000"];
 $(".celan-li").click(function () {
-    var index=$(this).index()-1;
+    var index = $(this).index() - 1;
     console.log(index);
-    var ot=$(".leftbar").eq(index).offset().top;
-    $("html,body").animate({scrollTop:ot});
+    var ot = $(".leftbar").eq(index).offset().top;
+    $("html,body").animate({scrollTop: ot});
 }).hover(function () {
-    var index=$(this).index()-1;
+    var index = $(this).index() - 1;
     // console.log(index);
-    $(this).css("background",colorarr[index]);
+    $(this).css("background", colorarr[index]);
     console.log(index);
-},function () {
-    $(this).css("background","")
+}, function () {
+    $(this).css("background", "")
 });
 $(".totop").click(function () {
     $(window).scrollTop(0);
@@ -270,11 +270,11 @@ $(".totop").click(function () {
 
 //顶部显示隐藏
 $(window).scroll(function () {
-    var st=$(this).scrollTop();
-    if(st>300){
-        $(".top").css("top",0);
-    }else{
-        $(".top").css("top",-50);
+    var st = $(this).scrollTop();
+    if (st > 300) {
+        $(".top").css("top", 0);
+    } else {
+        $(".top").css("top", -50);
     }
 });
 //input搜索
