@@ -1,6 +1,6 @@
 //banner图
 //原生的办法
-var btns = document.querySelectorAll(".dian li");
+/*var btns = document.querySelectorAll(".dian li");
 var cons = document.querySelectorAll(".banner-tu li");
 var bigbox = document.querySelector(".banner");
 var btnnow = btns[0];
@@ -50,11 +50,11 @@ bigbox.onmouseover = function () {
 };
 bigbox.onmouseout = function () {
     t = setInterval(move, 3000);
-};
+};*/
 
 //banner用JQuery写
 // JQuery
-/*var btns = $(".dian li");
+var btns = $(".dian li");
 var cons = $(".banner-tu li");
 var bigbox = $(".banner");
 var bgcolor = ["#E8E8E8", "#9AD6FA", "#FCFCFC", "#D50334", "#9A00DB", "#FCFCFC"];
@@ -82,7 +82,6 @@ bigbox.hover(function () {
 }, function () {
     t = setInterval(movebener, 3000);
 });
-*/
 
 //banner下面
 var btns2 = document.querySelectorAll(".left-center-ul li");

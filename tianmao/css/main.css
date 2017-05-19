@@ -462,6 +462,7 @@ nav .sou ul li:nth-child(9) {
     left: 0;
     top: 0;
     opacity: 0;
+    transition: all 2s;
 }
 
 .banner-box .banner-tu li.active {
